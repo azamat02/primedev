@@ -90,3 +90,15 @@
   animation: fade-in-up 0.6s ease-out both;
 }
 
+/* Outside @layer so these win over Tailwind utilities */
+.section-label {
+  font-family: 'Unbounded', system-ui, sans-serif !important;
+  font-size: 0.875rem !important;
+  letter-spacing: 0.2em !important;
+}
+
+.section-heading {
+  font-family: 'Unbounded', system-ui, sans-serif !important;
+  letter-spacing: -0.02em !important;
+}
+
