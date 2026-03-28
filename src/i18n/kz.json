@@ -1,0 +1,36 @@
+{
+  "lang": "kk",
+  "dir": "ltr",
+  "meta": { "title": "PrimeDev — Толық циклді IT-әзірлеу", "description": "Веб-қосымшалар, мобильді шешімдер, Telegram-боттар және Kaspi төлемдерін автоматтандыру. primedev.kz" },
+  "nav": { "services": "Қызметтер", "portfolio": "Кейстер", "process": "Процесс", "faq": "FAQ", "contact": "Байланыс" },
+  "hero": { "label": "ТОЛЫҚ ЦИКЛДІ IT-ӘЗІРЛЕУ", "heading": "Идеяларды", "headingAccent": "жұмыс істейтін өнімдерге", "description": "Веб-қосымшалар, мобильді шешімдер, Telegram-боттар және Kaspi төлемдерін автоматтандыру", "cta": "Жобаны талқылау", "ctaSecondary": "Біздің кейстер ↓" },
+  "services": { "label": "ҚЫЗМЕТТЕР", "heading": "Біз не істейміз", "items": [
+    { "icon": "🌐", "title": "Веб-әзірлеу", "description": "Сайттар, SaaS-платформалар, React/Next.js лендингтер" },
+    { "icon": "🤖", "title": "Telegram боттар", "description": "Автоматтандыру, төлемдер, жазылымдар, CRM-интеграциялар" },
+    { "icon": "💳", "title": "Kaspi интеграциялар", "description": "Автотөлем, шот жазу, кассирсіз растау" },
+    { "icon": "📱", "title": "Мобильді әзірлеу", "description": "iOS және Android қосымшалар" },
+    { "icon": "📊", "title": "CRM жүйелер", "description": "Клиенттің толық циклі, сатылым аналитикасы" },
+    { "icon": "🎨", "title": "UI/UX дизайн", "description": "Интерфейстер, прототиптер, дизайн-жүйелер" }
+  ]},
+  "portfolio": { "label": "ПОРТФОЛИО", "heading": "Біздің кейстер", "subtitle": "Қазір жұмыс істеп тұрған нақты жобалар", "items": [
+    { "number": "01", "category": "Fintech / Payments", "title": "Tolemflow", "description": "Kaspi API автотөлем сервисі. Инфобизнес, курстар және цифрлық өнімдер үшін автотөлемді Telegram-боттар.", "tags": ["Python", "Kaspi API", "Telegram"] },
+    { "number": "02", "category": "Tickets / Events", "title": "FlowTickets", "description": "Билет сату сервисі: Telegram-бот, билет беру және тексеру, сатушылар CRM, аналитика.", "tags": ["React", "CRM", "Telegram"] },
+    { "number": "03", "category": "Community", "title": "Subscription Bots", "description": "Қауымдастықтар үшін Telegram-боттар: жазылымдар, автотөлем, админ панель, қайталанатын төлемдер.", "tags": ["Python", "Payments", "Admin Panel"] },
+    { "number": "04", "category": "Websites", "title": "Лендингтер", "description": "izzamuzzic.com, topspot.kz — бизнес пен әртістерге арналған лендингтердің дизайны мен әзірлеуі.", "tags": ["Next.js", "Design", "Tailwind"] }
+  ]},
+  "process": { "label": "ПРОЦЕСС", "heading": "Біз қалай жұмыс істейміз", "steps": [
+    { "number": "1", "title": "Брифинг", "description": "Міндет пен мақсатты талқылау" },
+    { "number": "2", "title": "Дизайн", "description": "UI/UX және архитектура" },
+    { "number": "3", "title": "Әзірлеу", "description": "Итеративті әзірлеу" },
+    { "number": "4", "title": "Іске қосу", "description": "Деплой және қолдау" }
+  ]},
+  "faq": { "label": "FAQ", "heading": "Жиі қойылатын сұрақтар", "items": [
+    { "question": "Әзірлеу қанша тұрады?", "answer": "Құны жобаның күрделілігіне байланысты. Брифингтен кейін әр жобаны жеке бағалаймыз. Тегін бағалау үшін бізге хабарласыңыз." },
+    { "question": "Әзірлеу мерзімдері қандай?", "answer": "Лендинг — 1 аптадан. Веб-қосымша — 4 аптадан. Telegram-бот — 2 аптадан. Нақты мерзімдер брифингтен кейін талқыланады." },
+    { "question": "Бізбен қалай жұмыс бастауға болады?", "answer": "Форма арқылы өтініш қалдырыңыз немесе бізге тікелей жазыңыз. Тегін брифинг өткіземіз, шешім ұсынамыз." },
+    { "question": "Қандай технологиялар қолданасыздар?", "answer": "Python, Django, FastAPI, React, Next.js, TypeScript, Tailwind CSS, PostgreSQL, Telegram Bot API, Kaspi API." },
+    { "question": "Іске қосқаннан кейін қолдау бар ма?", "answer": "Иә, жобаны іске қосқаннан кейін қолдау мен жетілдіру қызметін көрсетеміз. Шарттар жеке талқыланады." }
+  ]},
+  "contact": { "label": "БАЙЛАНЫС", "heading": "Жобаны талқылаймыз ба?", "namePlaceholder": "Сіздің атыңыз", "emailPlaceholder": "Телефон немесе email", "messagePlaceholder": "Жобаңыз туралы айтыңыз", "submit": "Өтініш жіберу", "successMessage": "Өтініш жіберілді! Жақын арада хабарласамыз.", "errorMessage": "Қате орын алды. Қайталап көріңіз." },
+  "footer": { "copyright": "© 2026 PrimeDev. Барлық құқықтар қорғалған.", "site": "primedev.kz" }
+}

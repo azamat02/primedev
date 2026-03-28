@@ -1,0 +1,36 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "meta": { "title": "PrimeDev — Full-Cycle IT Development", "description": "Web apps, mobile solutions, Telegram bots and Kaspi payment automation. primedev.kz" },
+  "nav": { "services": "Services", "portfolio": "Cases", "process": "Process", "faq": "FAQ", "contact": "Contact" },
+  "hero": { "label": "FULL-CYCLE IT DEVELOPMENT", "heading": "Turning ideas into", "headingAccent": "working products", "description": "Web apps, mobile solutions, Telegram bots and Kaspi payment automation", "cta": "Discuss your project", "ctaSecondary": "Our cases ↓" },
+  "services": { "label": "SERVICES", "heading": "What we do", "items": [
+    { "icon": "🌐", "title": "Web Development", "description": "Websites, SaaS platforms, landing pages with React/Next.js" },
+    { "icon": "🤖", "title": "Telegram Bots", "description": "Automation, payments, subscriptions, CRM integrations" },
+    { "icon": "💳", "title": "Kaspi Integrations", "description": "Auto-payments, invoicing, cashier-free confirmation" },
+    { "icon": "📱", "title": "Mobile Development", "description": "iOS and Android applications" },
+    { "icon": "📊", "title": "CRM Systems", "description": "Full client lifecycle, sales analytics" },
+    { "icon": "🎨", "title": "UI/UX Design", "description": "Interfaces, prototypes, design systems" }
+  ]},
+  "portfolio": { "label": "PORTFOLIO", "heading": "Our cases", "subtitle": "Real projects that are running right now", "items": [
+    { "number": "01", "category": "Fintech / Payments", "title": "Tolemflow", "description": "Kaspi API auto-payment service. Telegram bots with auto-payments for infobusiness, courses and digital products.", "tags": ["Python", "Kaspi API", "Telegram"] },
+    { "number": "02", "category": "Tickets / Events", "title": "FlowTickets", "description": "Ticket sales service: Telegram bot, ticket issuance and verification, sales CRM, analytics.", "tags": ["React", "CRM", "Telegram"] },
+    { "number": "03", "category": "Community", "title": "Subscription Bots", "description": "Telegram bots for communities: subscriptions, auto-payments, admin panel, recurring payments, reminders.", "tags": ["Python", "Payments", "Admin Panel"] },
+    { "number": "04", "category": "Websites", "title": "Landing Pages", "description": "izzamuzzic.com, topspot.kz — design and development of landing pages for businesses and artists.", "tags": ["Next.js", "Design", "Tailwind"] }
+  ]},
+  "process": { "label": "PROCESS", "heading": "How we work", "steps": [
+    { "number": "1", "title": "Briefing", "description": "Discuss goals and requirements" },
+    { "number": "2", "title": "Design", "description": "UI/UX and architecture" },
+    { "number": "3", "title": "Development", "description": "Iterative development" },
+    { "number": "4", "title": "Launch", "description": "Deploy and support" }
+  ]},
+  "faq": { "label": "FAQ", "heading": "Frequently asked questions", "items": [
+    { "question": "How much does development cost?", "answer": "The cost depends on the project complexity. We evaluate each project individually after a briefing. Contact us for a free estimate." },
+    { "question": "What are the development timelines?", "answer": "Landing page — from 1 week. Web app — from 4 weeks. Telegram bot — from 2 weeks. Exact timelines are discussed after briefing." },
+    { "question": "How do we get started?", "answer": "Submit a request via the form or contact us directly. We'll conduct a free briefing, propose a solution and provide an estimate." },
+    { "question": "What technologies do you use?", "answer": "Python, Django, FastAPI, React, Next.js, TypeScript, Tailwind CSS, PostgreSQL, Telegram Bot API, Kaspi API." },
+    { "question": "Do you provide post-launch support?", "answer": "Yes, we provide support and improvements after project launch. Terms are discussed individually." }
+  ]},
+  "contact": { "label": "CONTACT", "heading": "Discuss your project?", "namePlaceholder": "Your name", "emailPlaceholder": "Phone or email", "messagePlaceholder": "Tell us about your project", "submit": "Submit request", "successMessage": "Request sent! We'll get back to you shortly.", "errorMessage": "Something went wrong. Please try again." },
+  "footer": { "copyright": "© 2026 PrimeDev. All rights reserved.", "site": "primedev.kz" }
+}

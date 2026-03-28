@@ -1,0 +1,81 @@
+{
+  "lang": "ru",
+  "dir": "ltr",
+  "meta": {
+    "title": "PrimeDev — IT-разработка полного цикла",
+    "description": "Веб-приложения, мобильные решения, Telegram-боты и автоматизация платежей Kaspi. primedev.kz"
+  },
+  "nav": {
+    "services": "Услуги",
+    "portfolio": "Кейсы",
+    "process": "Процесс",
+    "faq": "FAQ",
+    "contact": "Контакты"
+  },
+  "hero": {
+    "label": "IT-РАЗРАБОТКА ПОЛНОГО ЦИКЛА",
+    "heading": "Превращаем идеи в",
+    "headingAccent": "работающие продукты",
+    "description": "Веб-приложения, мобильные решения, Telegram-боты и автоматизация платежей Kaspi",
+    "cta": "Обсудить проект",
+    "ctaSecondary": "Наши кейсы ↓"
+  },
+  "services": {
+    "label": "УСЛУГИ",
+    "heading": "Что мы делаем",
+    "items": [
+      { "icon": "🌐", "title": "Веб-разработка", "description": "Сайты, SaaS-платформы, лендинги на React/Next.js" },
+      { "icon": "🤖", "title": "Telegram боты", "description": "Автоматизация, платежи, подписки, CRM-интеграции" },
+      { "icon": "💳", "title": "Kaspi интеграции", "description": "Автооплата, выставление счетов, подтверждение без кассира" },
+      { "icon": "📱", "title": "Мобильная разработка", "description": "iOS и Android приложения" },
+      { "icon": "📊", "title": "CRM системы", "description": "Полный цикл клиента, аналитика продаж" },
+      { "icon": "🎨", "title": "UI/UX дизайн", "description": "Интерфейсы, прототипы, дизайн-системы" }
+    ]
+  },
+  "portfolio": {
+    "label": "ПОРТФОЛИО",
+    "heading": "Наши кейсы",
+    "subtitle": "Реальные проекты, которые работают прямо сейчас",
+    "items": [
+      { "number": "01", "category": "Fintech / Payments", "title": "Tolemflow", "description": "Сервис автооплаты Kaspi API. Telegram-боты с автооплатой для инфобизнеса, курсов и цифровых продуктов.", "tags": ["Python", "Kaspi API", "Telegram"] },
+      { "number": "02", "category": "Tickets / Events", "title": "FlowTickets", "description": "Сервис продажи билетов: Telegram-бот, выдача и проверка билетов, CRM для продажников, аналитика.", "tags": ["React", "CRM", "Telegram"] },
+      { "number": "03", "category": "Community", "title": "Subscription Bots", "description": "Telegram-боты для сообществ: подписки, автооплата, админ-панель, рекуррентные платежи, напоминания.", "tags": ["Python", "Payments", "Admin Panel"] },
+      { "number": "04", "category": "Websites", "title": "Лендинги", "description": "izzamuzzic.com, topspot.kz — дизайн и разработка лендингов для бизнеса и артистов.", "tags": ["Next.js", "Design", "Tailwind"] }
+    ]
+  },
+  "process": {
+    "label": "ПРОЦЕСС",
+    "heading": "Как мы работаем",
+    "steps": [
+      { "number": "1", "title": "Брифинг", "description": "Обсуждаем задачу и цели" },
+      { "number": "2", "title": "Дизайн", "description": "Проектирование и архитектура" },
+      { "number": "3", "title": "Разработка", "description": "Итеративная разработка" },
+      { "number": "4", "title": "Запуск", "description": "Деплой и поддержка" }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Частые вопросы",
+    "items": [
+      { "question": "Сколько стоит разработка?", "answer": "Стоимость зависит от сложности проекта. Мы оцениваем каждый проект индивидуально после брифинга. Свяжитесь с нами для бесплатной оценки." },
+      { "question": "Какие сроки разработки?", "answer": "Лендинг — от 1 недели. Веб-приложение — от 4 недель. Telegram-бот — от 2 недель. Точные сроки обсуждаем после брифинга." },
+      { "question": "Как начать работу с нами?", "answer": "Оставьте заявку через форму или напишите нам. Мы проведём бесплатный брифинг, предложим решение и оценку." },
+      { "question": "Какие технологии используете?", "answer": "Python, Django, FastAPI, React, Next.js, TypeScript, Tailwind CSS, PostgreSQL, Telegram Bot API, Kaspi API." },
+      { "question": "Есть ли поддержка после запуска?", "answer": "Да, мы предоставляем поддержку и доработку после запуска проекта. Условия обсуждаем индивидуально." }
+    ]
+  },
+  "contact": {
+    "label": "КОНТАКТЫ",
+    "heading": "Обсудим проект?",
+    "namePlaceholder": "Ваше имя",
+    "emailPlaceholder": "Телефон или email",
+    "messagePlaceholder": "Расскажите о проекте",
+    "submit": "Отправить заявку",
+    "successMessage": "Заявка отправлена! Мы свяжемся с вами в ближайшее время.",
+    "errorMessage": "Произошла ошибка. Попробуйте ещё раз."
+  },
+  "footer": {
+    "copyright": "© 2026 PrimeDev. Все права защищены.",
+    "site": "primedev.kz"
+  }
+}
