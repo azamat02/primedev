@@ -22,6 +22,7 @@
 
   .section-heading {
     @apply text-3xl md:text-4xl font-bold mt-3;
+    font-family: 'Unbounded', system-ui, sans-serif;
   }
 
   .card-base {
