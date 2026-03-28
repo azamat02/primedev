@@ -1,4 +1,14 @@
 ---
+interface Props {
+  t: any;
+}
+
 const { t } = Astro.props;
 ---
-<footer>Footer placeholder</footer>
+
+<footer class="py-6 px-6 border-t border-white/5">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between text-muted text-xs gap-2">
+    <span>{t.footer.copyright}</span>
+    <span>{t.footer.site}</span>
+  </div>
+</footer>
