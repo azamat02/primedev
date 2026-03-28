@@ -17,7 +17,8 @@ const langMap = { ru: '/', kz: '/kz/', en: '/en/' };
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="alternate" hreflang="ru" href="https://primedev.kz/" />
     <link rel="alternate" hreflang="kk" href="https://primedev.kz/kz/" />
     <link rel="alternate" hreflang="en" href="https://primedev.kz/en/" />
@@ -52,6 +53,20 @@ const langMap = { ru: '/', kz: '/kz/', en: '/en/' };
 
     document.querySelectorAll('[data-animate]').forEach((el) => {
       observer.observe(el);
+    });
+
+    // Smooth scroll with offset for sticky nav
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const href = (anchor as HTMLAnchorElement).getAttribute('href');
+        if (!href || href === '#') return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
     });
   </script>
 </html>

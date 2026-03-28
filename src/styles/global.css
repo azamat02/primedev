@@ -17,7 +17,8 @@
 
 @layer components {
   .section-label {
-    @apply text-xs uppercase tracking-[3px] text-accent inline-block relative;
+    @apply text-sm uppercase tracking-[4px] text-accent inline-block relative font-medium;
+    font-family: 'Unbounded', system-ui, sans-serif;
   }
 
   .section-label::before,
@@ -31,18 +32,19 @@
   }
 
   .section-label::before {
-    right: calc(100% + 12px);
+    right: calc(100% + 14px);
     background: linear-gradient(90deg, transparent, rgba(239,68,68,0.4));
   }
 
   .section-label::after {
-    left: calc(100% + 12px);
+    left: calc(100% + 14px);
     background: linear-gradient(270deg, transparent, rgba(239,68,68,0.4));
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl font-bold mt-3;
+    @apply text-3xl md:text-5xl font-bold mt-4;
     font-family: 'Unbounded', system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 
   .card-base {
