@@ -35,6 +35,10 @@
   .btn-outline {
     @apply border border-accent/40 text-accent hover:bg-accent/10 px-7 py-3 rounded-lg text-sm transition-colors;
   }
+
+  [data-animate] {
+    opacity: 0;
+  }
 }
 
 @keyframes fade-in-up {
