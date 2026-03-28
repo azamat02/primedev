@@ -57,21 +57,83 @@ const { t } = Astro.props;
           <div class="flex gap-2">
             <select
               id="phone-code"
-              class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-3 py-4 text-white text-sm focus:outline-none focus:border-accent/40 focus:bg-white/[0.05] transition-all duration-300 w-[120px] flex-shrink-0 appearance-none cursor-pointer"
+              class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-3 py-4 text-white text-sm focus:outline-none focus:border-accent/40 focus:bg-white/[0.05] transition-all duration-300 w-[130px] flex-shrink-0 appearance-none cursor-pointer"
               style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 10px center;"
             >
+              <!-- CIS -->
               <option value="+7">🇰🇿 +7</option>
+              <option value="+7-ru">🇷🇺 +7</option>
               <option value="+998">🇺🇿 +998</option>
               <option value="+996">🇰🇬 +996</option>
               <option value="+992">🇹🇯 +992</option>
               <option value="+993">🇹🇲 +993</option>
-              <option value="+1">🇺🇸 +1</option>
+              <option value="+994">🇦🇿 +994</option>
+              <option value="+995">🇬🇪 +995</option>
+              <option value="+374">🇦🇲 +374</option>
+              <option value="+375">🇧🇾 +375</option>
+              <option value="+380">🇺🇦 +380</option>
+              <option value="+373">🇲🇩 +373</option>
+              <!-- Middle East -->
+              <option value="+971">🇦🇪 +971</option>
+              <option value="+966">🇸🇦 +966</option>
+              <option value="+974">🇶🇦 +974</option>
+              <option value="+90">🇹🇷 +90</option>
+              <option value="+972">🇮🇱 +972</option>
+              <!-- Asia -->
+              <option value="+86">🇨🇳 +86</option>
+              <option value="+82">🇰🇷 +82</option>
+              <option value="+81">🇯🇵 +81</option>
+              <option value="+91">🇮🇳 +91</option>
+              <option value="+66">🇹🇭 +66</option>
+              <option value="+62">🇮🇩 +62</option>
+              <option value="+60">🇲🇾 +60</option>
+              <option value="+65">🇸🇬 +65</option>
+              <option value="+63">🇵🇭 +63</option>
+              <option value="+84">🇻🇳 +84</option>
+              <option value="+92">🇵🇰 +92</option>
+              <option value="+880">🇧🇩 +880</option>
+              <!-- Europe -->
               <option value="+44">🇬🇧 +44</option>
               <option value="+49">🇩🇪 +49</option>
-              <option value="+971">🇦🇪 +971</option>
-              <option value="+90">🇹🇷 +90</option>
-              <option value="+82">🇰🇷 +82</option>
-              <option value="+86">🇨🇳 +86</option>
+              <option value="+33">🇫🇷 +33</option>
+              <option value="+39">🇮🇹 +39</option>
+              <option value="+34">🇪🇸 +34</option>
+              <option value="+31">🇳🇱 +31</option>
+              <option value="+48">🇵🇱 +48</option>
+              <option value="+46">🇸🇪 +46</option>
+              <option value="+47">🇳🇴 +47</option>
+              <option value="+45">🇩🇰 +45</option>
+              <option value="+358">🇫🇮 +358</option>
+              <option value="+43">🇦🇹 +43</option>
+              <option value="+41">🇨🇭 +41</option>
+              <option value="+32">🇧🇪 +32</option>
+              <option value="+351">🇵🇹 +351</option>
+              <option value="+420">🇨🇿 +420</option>
+              <option value="+30">🇬🇷 +30</option>
+              <option value="+36">🇭🇺 +36</option>
+              <option value="+40">🇷🇴 +40</option>
+              <option value="+359">🇧🇬 +359</option>
+              <option value="+381">🇷🇸 +381</option>
+              <option value="+385">🇭🇷 +385</option>
+              <option value="+353">🇮🇪 +353</option>
+              <!-- Americas -->
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+1-ca">🇨🇦 +1</option>
+              <option value="+52">🇲🇽 +52</option>
+              <option value="+55">🇧🇷 +55</option>
+              <option value="+54">🇦🇷 +54</option>
+              <option value="+56">🇨🇱 +56</option>
+              <option value="+57">🇨🇴 +57</option>
+              <option value="+51">🇵🇪 +51</option>
+              <!-- Africa -->
+              <option value="+20">🇪🇬 +20</option>
+              <option value="+27">🇿🇦 +27</option>
+              <option value="+234">🇳🇬 +234</option>
+              <option value="+254">🇰🇪 +254</option>
+              <option value="+212">🇲🇦 +212</option>
+              <!-- Oceania -->
+              <option value="+61">🇦🇺 +61</option>
+              <option value="+64">🇳🇿 +64</option>
             </select>
             <input
               type="tel"
@@ -101,52 +163,173 @@ const { t } = Astro.props;
 
           <button type="submit" id="submit-btn" class="shiny-cta mt-3 w-full justify-center" style="padding: 1rem 2rem;">
             <span id="submit-text">{t.contact.submit}</span>
+            <svg id="submit-spinner" class="hidden w-5 h-5 animate-spin" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" opacity="0.25"></circle>
+              <path d="M12 2a10 10 0 019.95 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            <svg id="submit-check" class="hidden w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
           </button>
-          <p id="form-success" class="hidden text-green-400 text-sm mt-1 text-center">{t.contact.successMessage}</p>
-          <p id="form-error" class="hidden text-red-400 text-sm mt-1 text-center">{t.contact.errorMessage}</p>
+          <p id="form-success" class="hidden text-sm mt-2 text-center" style="color: #4ade80;">{t.contact.successMessage}</p>
+          <p id="form-error" class="hidden text-sm mt-2 text-center" style="color: #ef4444;">{t.contact.errorMessage}</p>
         </form>
       </div>
     </div>
   </div>
 </section>
 
+<style is:global>
+  /* Button states */
+  .shiny-cta--loading {
+    --shiny-cta-highlight: #f59e0b !important;
+    --shiny-cta-highlight-subtle: #fbbf24 !important;
+    --duration: 1s !important;
+  }
+
+  .shiny-cta--loading,
+  .shiny-cta--loading::before,
+  .shiny-cta--loading::after {
+    animation-play-state: running !important;
+  }
+
+  .shiny-cta--success {
+    --shiny-cta-highlight: #22c55e !important;
+    --shiny-cta-highlight-subtle: #4ade80 !important;
+    --duration: 2s !important;
+  }
+
+  .shiny-cta--success,
+  .shiny-cta--success::before,
+  .shiny-cta--success::after {
+    animation-play-state: running !important;
+  }
+
+  .shiny-cta--error {
+    --shiny-cta-highlight: #ef4444 !important;
+    --shiny-cta-highlight-subtle: #f87171 !important;
+    --duration: 0.5s !important;
+  }
+
+  .shiny-cta--error,
+  .shiny-cta--error::before,
+  .shiny-cta--error::after {
+    animation-play-state: running !important;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-4px); }
+    40%, 80% { transform: translateX(4px); }
+  }
+</style>
+
 <script>
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const success = document.getElementById('form-success');
-  const error = document.getElementById('form-error');
+  const errorEl = document.getElementById('form-error');
   const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
   const submitText = document.getElementById('submit-text');
+  const submitSpinner = document.getElementById('submit-spinner');
+  const submitCheck = document.getElementById('submit-check');
   const phoneInput = document.getElementById('phone-number') as HTMLInputElement;
   const phoneCode = document.getElementById('phone-code') as HTMLSelectElement;
 
+  // Get raw code (strip suffixes like -ru, -ca)
+  function getRawCode(): string {
+    return phoneCode.value.replace(/-\w+$/, '');
+  }
+
   // Phone number formatting
   phoneInput?.addEventListener('input', () => {
+    const cursorPos = phoneInput.selectionStart || 0;
+    const prevLen = phoneInput.value.length;
     let val = phoneInput.value.replace(/\D/g, '');
+    const code = getRawCode();
 
-    if (phoneCode.value === '+7' && val.length > 0) {
-      // Format: (XXX) XXX-XX-XX
+    if (code === '+7' && val.length > 0) {
       if (val.startsWith('7') || val.startsWith('8')) val = val.slice(1);
-      let formatted = '';
-      if (val.length > 0) formatted += '(' + val.slice(0, 3);
-      if (val.length >= 3) formatted += ') ' + val.slice(3, 6);
-      if (val.length >= 6) formatted += '-' + val.slice(6, 8);
-      if (val.length >= 8) formatted += '-' + val.slice(8, 10);
-      phoneInput.value = formatted;
+      val = val.slice(0, 10);
+      let f = '';
+      if (val.length > 0) f += '(' + val.slice(0, 3);
+      if (val.length >= 3) f += ') ' + val.slice(3, 6);
+      if (val.length >= 6) f += '-' + val.slice(6, 8);
+      if (val.length >= 8) f += '-' + val.slice(8, 10);
+      phoneInput.value = f;
+    } else if (code === '+380' && val.length > 0) {
+      if (val.startsWith('380')) val = val.slice(3);
+      val = val.slice(0, 9);
+      let f = '';
+      if (val.length > 0) f += '(' + val.slice(0, 2);
+      if (val.length >= 2) f += ') ' + val.slice(2, 5);
+      if (val.length >= 5) f += '-' + val.slice(5, 7);
+      if (val.length >= 7) f += '-' + val.slice(7, 9);
+      phoneInput.value = f;
+    } else if (code === '+1' && val.length > 0) {
+      if (val.startsWith('1')) val = val.slice(1);
+      val = val.slice(0, 10);
+      let f = '';
+      if (val.length > 0) f += '(' + val.slice(0, 3);
+      if (val.length >= 3) f += ') ' + val.slice(3, 6);
+      if (val.length >= 6) f += '-' + val.slice(6, 10);
+      phoneInput.value = f;
+    } else if (code === '+998' && val.length > 0) {
+      val = val.slice(0, 9);
+      let f = '';
+      if (val.length > 0) f += '(' + val.slice(0, 2);
+      if (val.length >= 2) f += ') ' + val.slice(2, 5);
+      if (val.length >= 5) f += '-' + val.slice(5, 7);
+      if (val.length >= 7) f += '-' + val.slice(7, 9);
+      phoneInput.value = f;
     }
+
+    // Adjust cursor
+    const diff = phoneInput.value.length - prevLen;
+    phoneInput.setSelectionRange(cursorPos + diff, cursorPos + diff);
   });
+
+  // Reset formatting when code changes
+  phoneCode?.addEventListener('change', () => {
+    phoneInput.value = '';
+    phoneInput.focus();
+  });
+
+  // Set button state
+  function setBtnState(state: 'idle' | 'loading' | 'success' | 'error') {
+    submitBtn.classList.remove('shiny-cta--loading', 'shiny-cta--success', 'shiny-cta--error');
+    submitText?.classList.remove('hidden');
+    submitSpinner?.classList.add('hidden');
+    submitCheck?.classList.add('hidden');
+    submitBtn.style.pointerEvents = 'auto';
+
+    if (state === 'loading') {
+      submitBtn.classList.add('shiny-cta--loading');
+      submitText?.classList.add('hidden');
+      submitSpinner?.classList.remove('hidden');
+      submitBtn.style.pointerEvents = 'none';
+    } else if (state === 'success') {
+      submitBtn.classList.add('shiny-cta--success');
+      submitText?.classList.add('hidden');
+      submitCheck?.classList.remove('hidden');
+      submitBtn.style.pointerEvents = 'none';
+    } else if (state === 'error') {
+      submitBtn.classList.add('shiny-cta--error');
+      submitBtn.style.animation = 'shake 0.4s ease';
+      setTimeout(() => { submitBtn.style.animation = ''; }, 400);
+    }
+  }
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     success?.classList.add('hidden');
-    error?.classList.add('hidden');
+    errorEl?.classList.add('hidden');
 
-    const originalText = submitText?.textContent || '';
-    if (submitText) submitText.textContent = '...';
-    if (submitBtn) submitBtn.style.pointerEvents = 'none';
+    setBtnState('loading');
 
     try {
       const formData = new FormData(form);
-      const phone = phoneCode.value + ' ' + formData.get('phone');
+      const rawDigits = (formData.get('phone') as string).replace(/\D/g, '');
+      const phone = getRawCode() + rawDigits;
 
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -160,16 +343,19 @@ const { t } = Astro.props;
       });
 
       if (res.ok) {
+        setBtnState('success');
         form.reset();
         success?.classList.remove('hidden');
+        setTimeout(() => setBtnState('idle'), 3000);
       } else {
-        error?.classList.remove('hidden');
+        setBtnState('error');
+        errorEl?.classList.remove('hidden');
+        setTimeout(() => setBtnState('idle'), 2000);
       }
     } catch {
-      error?.classList.remove('hidden');
-    } finally {
-      if (submitText) submitText.textContent = originalText;
-      if (submitBtn) submitBtn.style.pointerEvents = 'auto';
+      setBtnState('error');
+      errorEl?.classList.remove('hidden');
+      setTimeout(() => setBtnState('idle'), 2000);
     }
   });
 </script>
