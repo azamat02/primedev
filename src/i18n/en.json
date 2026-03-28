@@ -16,7 +16,8 @@
     { "number": "01", "category": "Fintech / Payments", "title": "Tolemflow", "description": "Kaspi API auto-payment service. Telegram bots with auto-payments for infobusiness, courses and digital products.", "tags": ["Python", "Kaspi API", "Telegram"] },
     { "number": "02", "category": "Tickets / Events", "title": "FlowTickets", "description": "Ticket sales service: Telegram bot, ticket issuance and verification, sales CRM, analytics.", "tags": ["React", "CRM", "Telegram"] },
     { "number": "03", "category": "Community", "title": "Subscription Bots", "description": "Telegram bots for communities: subscriptions, auto-payments, admin panel, recurring payments, reminders.", "tags": ["Python", "Payments", "Admin Panel"] },
-    { "number": "04", "category": "Websites", "title": "Landing Pages", "description": "izzamuzzic.com, topspot.kz — design and development of landing pages for businesses and artists.", "tags": ["Next.js", "Design", "Tailwind"] }
+    { "number": "04", "category": "Websites", "title": "Landing Pages", "description": "izzamuzzic.com, topspot.kz — design and development of landing pages for businesses and artists.", "tags": ["Next.js", "Design", "Tailwind"] },
+    { "number": "05", "category": "HR / Enterprise", "title": "HR Platform KPI", "description": "Corporate performance management system: KPI hierarchy with tasks, 360° reviews, multi-level approval workflows, audit logging, report export.", "tags": ["React", "TypeScript", "PostgreSQL", "Docker"] }
   ]},
   "process": { "label": "PROCESS", "heading": "How we work", "steps": [
     { "number": "1", "title": "Briefing", "description": "Discuss goals and requirements" },

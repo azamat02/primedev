@@ -45,7 +45,8 @@
       { "number": "01", "category": "Fintech / Payments", "title": "Tolemflow", "description": "Сервис автооплаты Kaspi API. Telegram-боты с автооплатой для инфобизнеса, курсов и цифровых продуктов.", "tags": ["Python", "Kaspi API", "Telegram"] },
       { "number": "02", "category": "Tickets / Events", "title": "FlowTickets", "description": "Сервис продажи билетов: Telegram-бот, выдача и проверка билетов, CRM для продажников, аналитика.", "tags": ["React", "CRM", "Telegram"] },
       { "number": "03", "category": "Community", "title": "Subscription Bots", "description": "Telegram-боты для сообществ: подписки, автооплата, админ-панель, рекуррентные платежи, напоминания.", "tags": ["Python", "Payments", "Admin Panel"] },
-      { "number": "04", "category": "Websites", "title": "Лендинги", "description": "izzamuzzic.com, topspot.kz — дизайн и разработка лендингов для бизнеса и артистов.", "tags": ["Next.js", "Design", "Tailwind"] }
+      { "number": "04", "category": "Websites", "title": "Лендинги", "description": "izzamuzzic.com, topspot.kz — дизайн и разработка лендингов для бизнеса и артистов.", "tags": ["Next.js", "Design", "Tailwind"] },
+      { "number": "05", "category": "HR / Enterprise", "title": "HR-платформа KPI", "description": "Корпоративная система управления эффективностью: KPI с иерархией задач, оценки 360°, воркфлоу согласований, аудит действий, экспорт отчётов.", "tags": ["React", "TypeScript", "PostgreSQL", "Docker"] }
     ]
   },
   "process": {

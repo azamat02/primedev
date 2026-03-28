@@ -16,7 +16,8 @@
     { "number": "01", "category": "Fintech / Payments", "title": "Tolemflow", "description": "Kaspi API автотөлем сервисі. Инфобизнес, курстар және цифрлық өнімдер үшін автотөлемді Telegram-боттар.", "tags": ["Python", "Kaspi API", "Telegram"] },
     { "number": "02", "category": "Tickets / Events", "title": "FlowTickets", "description": "Билет сату сервисі: Telegram-бот, билет беру және тексеру, сатушылар CRM, аналитика.", "tags": ["React", "CRM", "Telegram"] },
     { "number": "03", "category": "Community", "title": "Subscription Bots", "description": "Қауымдастықтар үшін Telegram-боттар: жазылымдар, автотөлем, админ панель, қайталанатын төлемдер.", "tags": ["Python", "Payments", "Admin Panel"] },
-    { "number": "04", "category": "Websites", "title": "Лендингтер", "description": "izzamuzzic.com, topspot.kz — бизнес пен әртістерге арналған лендингтердің дизайны мен әзірлеуі.", "tags": ["Next.js", "Design", "Tailwind"] }
+    { "number": "04", "category": "Websites", "title": "Лендингтер", "description": "izzamuzzic.com, topspot.kz — бизнес пен әртістерге арналған лендингтердің дизайны мен әзірлеуі.", "tags": ["Next.js", "Design", "Tailwind"] },
+    { "number": "05", "category": "HR / Enterprise", "title": "HR-платформа KPI", "description": "Корпоративтік тиімділікті басқару жүйесі: KPI иерархиясы, 360° бағалау, көпдеңгейлі келісу процесі, аудит журналы, есептерді экспорттау.", "tags": ["React", "TypeScript", "PostgreSQL", "Docker"] }
   ]},
   "process": { "label": "ПРОЦЕСС", "heading": "Біз қалай жұмыс істейміз", "steps": [
     { "number": "1", "title": "Брифинг", "description": "Міндет пен мақсатты талқылау" },
