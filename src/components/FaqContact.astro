@@ -8,7 +8,6 @@ const { t } = Astro.props;
 
 <section id="faq" data-animate class="relative py-24 px-6 overflow-hidden">
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
-  <!-- Glow behind contact form -->
   <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full opacity-20" style="background: radial-gradient(circle, rgba(239,68,68,0.08) 0%, transparent 70%);"></div>
 
   <div class="max-w-6xl mx-auto">
@@ -43,10 +42,9 @@ const { t } = Astro.props;
         </div>
         <form
           id="contact-form"
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
           class="flex flex-col gap-4 relative z-10"
         >
+          <!-- Name (required) -->
           <input
             type="text"
             name="name"
@@ -54,24 +52,58 @@ const { t } = Astro.props;
             placeholder={t.contact.namePlaceholder}
             class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5 py-4 text-white text-sm placeholder:text-muted/60 focus:outline-none focus:border-accent/40 focus:bg-white/[0.05] transition-all duration-300"
           />
+
+          <!-- Phone (required) with country code -->
+          <div class="flex gap-2">
+            <select
+              id="phone-code"
+              class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-3 py-4 text-white text-sm focus:outline-none focus:border-accent/40 focus:bg-white/[0.05] transition-all duration-300 w-[120px] flex-shrink-0 appearance-none cursor-pointer"
+              style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 10px center;"
+            >
+              <option value="+7">🇰🇿 +7</option>
+              <option value="+998">🇺🇿 +998</option>
+              <option value="+996">🇰🇬 +996</option>
+              <option value="+992">🇹🇯 +992</option>
+              <option value="+993">🇹🇲 +993</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+49">🇩🇪 +49</option>
+              <option value="+971">🇦🇪 +971</option>
+              <option value="+90">🇹🇷 +90</option>
+              <option value="+82">🇰🇷 +82</option>
+              <option value="+86">🇨🇳 +86</option>
+            </select>
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone"
+              required
+              placeholder={t.contact.phonePlaceholder}
+              class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5 py-4 text-white text-sm placeholder:text-muted/60 focus:outline-none focus:border-accent/40 focus:bg-white/[0.05] transition-all duration-300 flex-1"
+            />
+          </div>
+
+          <!-- Email (optional) -->
           <input
-            type="text"
-            name="contact"
-            required
+            type="email"
+            name="email"
             placeholder={t.contact.emailPlaceholder}
             class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5 py-4 text-white text-sm placeholder:text-muted/60 focus:outline-none focus:border-accent/40 focus:bg-white/[0.05] transition-all duration-300"
           />
+
+          <!-- Message (optional) -->
           <textarea
             name="message"
             rows="4"
             placeholder={t.contact.messagePlaceholder}
             class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5 py-4 text-white text-sm placeholder:text-muted/60 focus:outline-none focus:border-accent/40 focus:bg-white/[0.05] transition-all duration-300 resize-none"
           ></textarea>
-          <button type="submit" class="shiny-cta mt-3 w-full justify-center" style="padding: 1rem 2rem;">
-            <span>{t.contact.submit}</span>
+
+          <button type="submit" id="submit-btn" class="shiny-cta mt-3 w-full justify-center" style="padding: 1rem 2rem;">
+            <span id="submit-text">{t.contact.submit}</span>
           </button>
-          <p id="form-success" class="hidden text-green-400 text-sm mt-1">{t.contact.successMessage}</p>
-          <p id="form-error" class="hidden text-red-400 text-sm mt-1">{t.contact.errorMessage}</p>
+          <p id="form-success" class="hidden text-green-400 text-sm mt-1 text-center">{t.contact.successMessage}</p>
+          <p id="form-error" class="hidden text-red-400 text-sm mt-1 text-center">{t.contact.errorMessage}</p>
         </form>
       </div>
     </div>
@@ -82,17 +114,49 @@ const { t } = Astro.props;
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const success = document.getElementById('form-success');
   const error = document.getElementById('form-error');
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const submitText = document.getElementById('submit-text');
+  const phoneInput = document.getElementById('phone-number') as HTMLInputElement;
+  const phoneCode = document.getElementById('phone-code') as HTMLSelectElement;
+
+  // Phone number formatting
+  phoneInput?.addEventListener('input', () => {
+    let val = phoneInput.value.replace(/\D/g, '');
+
+    if (phoneCode.value === '+7' && val.length > 0) {
+      // Format: (XXX) XXX-XX-XX
+      if (val.startsWith('7') || val.startsWith('8')) val = val.slice(1);
+      let formatted = '';
+      if (val.length > 0) formatted += '(' + val.slice(0, 3);
+      if (val.length >= 3) formatted += ') ' + val.slice(3, 6);
+      if (val.length >= 6) formatted += '-' + val.slice(6, 8);
+      if (val.length >= 8) formatted += '-' + val.slice(8, 10);
+      phoneInput.value = formatted;
+    }
+  });
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     success?.classList.add('hidden');
     error?.classList.add('hidden');
 
+    const originalText = submitText?.textContent || '';
+    if (submitText) submitText.textContent = '...';
+    if (submitBtn) submitBtn.style.pointerEvents = 'none';
+
     try {
-      const res = await fetch(form.action, {
+      const formData = new FormData(form);
+      const phone = phoneCode.value + ' ' + formData.get('phone');
+
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          phone,
+          email: formData.get('email') || '',
+          message: formData.get('message') || '',
+        }),
       });
 
       if (res.ok) {
@@ -103,6 +167,9 @@ const { t } = Astro.props;
       }
     } catch {
       error?.classList.remove('hidden');
+    } finally {
+      if (submitText) submitText.textContent = originalText;
+      if (submitBtn) submitBtn.style.pointerEvents = 'auto';
     }
   });
 </script>

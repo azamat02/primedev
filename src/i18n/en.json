@@ -31,6 +31,6 @@
     { "question": "What technologies do you use?", "answer": "Python, Django, FastAPI, React, Next.js, TypeScript, Tailwind CSS, PostgreSQL, Telegram Bot API, Kaspi API." },
     { "question": "Do you provide post-launch support?", "answer": "Yes, we provide support and improvements after project launch. Terms are discussed individually." }
   ]},
-  "contact": { "label": "CONTACT", "heading": "Discuss your project?", "namePlaceholder": "Your name", "emailPlaceholder": "Phone or email", "messagePlaceholder": "Tell us about your project", "submit": "Submit request", "successMessage": "Request sent! We'll get back to you shortly.", "errorMessage": "Something went wrong. Please try again." },
+  "contact": { "label": "CONTACT", "heading": "Discuss your project?", "namePlaceholder": "Your name", "emailPlaceholder": "Email (optional)", "phonePlaceholder": "Phone number", "messagePlaceholder": "Tell us about your project", "submit": "Submit request", "successMessage": "Request sent! We'll get back to you shortly.", "errorMessage": "Something went wrong. Please try again." },
   "footer": { "copyright": "© 2026 PrimeDev. All rights reserved.", "site": "primedev.kz" }
 }

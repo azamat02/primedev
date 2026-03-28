@@ -31,6 +31,6 @@
     { "question": "Қандай технологиялар қолданасыздар?", "answer": "Python, Django, FastAPI, React, Next.js, TypeScript, Tailwind CSS, PostgreSQL, Telegram Bot API, Kaspi API." },
     { "question": "Іске қосқаннан кейін қолдау бар ма?", "answer": "Иә, жобаны іске қосқаннан кейін қолдау мен жетілдіру қызметін көрсетеміз. Шарттар жеке талқыланады." }
   ]},
-  "contact": { "label": "БАЙЛАНЫС", "heading": "Жобаны талқылаймыз ба?", "namePlaceholder": "Сіздің атыңыз", "emailPlaceholder": "Телефон немесе email", "messagePlaceholder": "Жобаңыз туралы айтыңыз", "submit": "Өтініш жіберу", "successMessage": "Өтініш жіберілді! Жақын арада хабарласамыз.", "errorMessage": "Қате орын алды. Қайталап көріңіз." },
+  "contact": { "label": "БАЙЛАНЫС", "heading": "Жобаны талқылаймыз ба?", "namePlaceholder": "Сіздің атыңыз", "emailPlaceholder": "Email (міндетті емес)", "phonePlaceholder": "Телефон нөмірі", "messagePlaceholder": "Жобаңыз туралы айтыңыз", "submit": "Өтініш жіберу", "successMessage": "Өтініш жіберілді! Жақын арада хабарласамыз.", "errorMessage": "Қате орын алды. Қайталап көріңіз." },
   "footer": { "copyright": "© 2026 PrimeDev. Барлық құқықтар қорғалған.", "site": "primedev.kz" }
 }
