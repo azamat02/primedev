@@ -3,7 +3,7 @@
   "dir": "ltr",
   "meta": { "title": "PrimeDev — Толық циклді IT-әзірлеу", "description": "Веб-қосымшалар, мобильді шешімдер, Telegram-боттар және Kaspi төлемдерін автоматтандыру. primedev.kz" },
   "nav": { "services": "Қызметтер", "portfolio": "Кейстер", "process": "Процесс", "faq": "FAQ", "contact": "Байланыс" },
-  "hero": { "label": "ТОЛЫҚ ЦИКЛДІ IT-ӘЗІРЛЕУ", "heading": "Идеяларды", "headingAccent": "жұмыс істейтін өнімдерге", "description": "Веб-қосымшалар, мобильді шешімдер, Telegram-боттар және Kaspi төлемдерін автоматтандыру", "cta": "Жобаны талқылау", "ctaSecondary": "Біздің кейстер ↓" },
+  "hero": { "label": "ТОЛЫҚ ЦИКЛДІ IT-ӘЗІРЛЕУ", "heading": "Идеяларды", "headingAccent": "жұмыс істейтін өнімдерге", "description": "Веб-қосымшалар, мобильді шешімдер, Telegram-боттар және Kaspi төлемдерін автоматтандыру", "cta": "Жобаны талқылау", "ctaSecondary": "Біздің кейстер ↓", "stats": { "projects": "жоба", "years": "жыл", "support": "қолдау" } },
   "services": { "label": "ҚЫЗМЕТТЕР", "heading": "Біз не істейміз", "items": [
     { "icon": "🌐", "title": "Веб-әзірлеу", "description": "Сайттар, SaaS-платформалар, React/Next.js лендингтер" },
     { "icon": "🤖", "title": "Telegram боттар", "description": "Автоматтандыру, төлемдер, жазылымдар, CRM-интеграциялар" },

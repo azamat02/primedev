@@ -3,7 +3,7 @@
   "dir": "ltr",
   "meta": { "title": "PrimeDev — Full-Cycle IT Development", "description": "Web apps, mobile solutions, Telegram bots and Kaspi payment automation. primedev.kz" },
   "nav": { "services": "Services", "portfolio": "Cases", "process": "Process", "faq": "FAQ", "contact": "Contact" },
-  "hero": { "label": "FULL-CYCLE IT DEVELOPMENT", "heading": "Turning ideas into", "headingAccent": "working products", "description": "Web apps, mobile solutions, Telegram bots and Kaspi payment automation", "cta": "Discuss your project", "ctaSecondary": "Our cases ↓" },
+  "hero": { "label": "FULL-CYCLE IT DEVELOPMENT", "heading": "Turning ideas into", "headingAccent": "working products", "description": "Web apps, mobile solutions, Telegram bots and Kaspi payment automation", "cta": "Discuss your project", "ctaSecondary": "Our cases ↓", "stats": { "projects": "projects", "years": "years", "support": "support" } },
   "services": { "label": "SERVICES", "heading": "What we do", "items": [
     { "icon": "🌐", "title": "Web Development", "description": "Websites, SaaS platforms, landing pages with React/Next.js" },
     { "icon": "🤖", "title": "Telegram Bots", "description": "Automation, payments, subscriptions, CRM integrations" },

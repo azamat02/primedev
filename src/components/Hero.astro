@@ -42,18 +42,18 @@ const { t } = Astro.props;
     <!-- Stats bar -->
     <div class="mt-20 flex items-center justify-center gap-8 md:gap-16">
       <div class="text-center">
-        <div class="text-3xl md:text-4xl font-bold text-white" style="font-family: 'Unbounded', sans-serif;">50<span class="text-accent">+</span></div>
-        <div class="text-muted text-xs mt-1 uppercase tracking-wider">проектов</div>
+        <div class="text-3xl md:text-4xl font-bold text-white" style="font-family: 'Unbounded', 'Inter', sans-serif;">50<span class="text-accent">+</span></div>
+        <div class="text-muted text-xs mt-1 uppercase tracking-wider">{t.hero.stats.projects}</div>
       </div>
       <div class="w-px h-12 bg-white/10"></div>
       <div class="text-center">
-        <div class="text-3xl md:text-4xl font-bold text-white" style="font-family: 'Unbounded', sans-serif;">3<span class="text-accent">+</span></div>
-        <div class="text-muted text-xs mt-1 uppercase tracking-wider">года</div>
+        <div class="text-3xl md:text-4xl font-bold text-white" style="font-family: 'Unbounded', 'Inter', sans-serif;">3<span class="text-accent">+</span></div>
+        <div class="text-muted text-xs mt-1 uppercase tracking-wider">{t.hero.stats.years}</div>
       </div>
       <div class="w-px h-12 bg-white/10"></div>
       <div class="text-center">
-        <div class="text-3xl md:text-4xl font-bold text-white" style="font-family: 'Unbounded', sans-serif;">24<span class="text-accent">/7</span></div>
-        <div class="text-muted text-xs mt-1 uppercase tracking-wider">поддержка</div>
+        <div class="text-3xl md:text-4xl font-bold text-white" style="font-family: 'Unbounded', 'Inter', sans-serif;">24<span class="text-accent">/7</span></div>
+        <div class="text-muted text-xs mt-1 uppercase tracking-wider">{t.hero.stats.support}</div>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@ const { t } = Astro.props;
 
 <style is:global>
   .hero-heading {
-    font-family: 'Unbounded', system-ui, sans-serif;
+    font-family: 'Unbounded', 'Inter', system-ui, sans-serif;
   }
 
   /* Grid with dots at intersections */

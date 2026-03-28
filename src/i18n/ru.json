@@ -18,7 +18,12 @@
     "headingAccent": "работающие продукты",
     "description": "Веб-приложения, мобильные решения, Telegram-боты и автоматизация платежей Kaspi",
     "cta": "Обсудить проект",
-    "ctaSecondary": "Наши кейсы ↓"
+    "ctaSecondary": "Наши кейсы ↓",
+    "stats": {
+      "projects": "проектов",
+      "years": "года",
+      "support": "поддержка"
+    }
   },
   "services": {
     "label": "УСЛУГИ",
