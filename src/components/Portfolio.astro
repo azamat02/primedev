@@ -6,28 +6,36 @@ interface Props {
 const { t } = Astro.props;
 ---
 
-<section id="portfolio" data-animate class="py-20 px-6 border-t border-white/5">
+<section id="portfolio" data-animate class="relative py-24 px-6">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
+
   <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-10">
+    <div class="text-center mb-14">
       <p class="section-label">{t.portfolio.label}</p>
       <h2 class="section-heading">{t.portfolio.heading}</h2>
-      <p class="text-body text-sm mt-2">{t.portfolio.subtitle}</p>
+      <p class="text-body text-base mt-3">{t.portfolio.subtitle}</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       {t.portfolio.items.map((item: any) => (
-        <div class="relative overflow-hidden rounded-xl p-6 border border-accent/[0.15]" style="background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(239,68,68,0.03));">
-          <div class="absolute top-3 right-4 text-5xl font-extrabold text-accent/[0.08] select-none">
+        <div class="group relative overflow-hidden rounded-2xl p-7 border border-white/[0.06] bg-white/[0.02] hover:border-accent/20 transition-all duration-500">
+          <!-- Background number -->
+          <div class="absolute -top-2 -right-2 text-[80px] font-black text-accent/[0.04] select-none leading-none group-hover:text-accent/[0.08] transition-colors duration-500">
             {item.number}
           </div>
-          <p class="text-[11px] text-accent uppercase tracking-widest">{item.category}</p>
-          <h3 class="text-lg font-bold mt-2">{item.title}</h3>
-          <p class="text-body text-xs mt-2 leading-relaxed">{item.description}</p>
-          <div class="flex flex-wrap gap-1.5 mt-3">
-            {item.tags.map((tag: string) => (
-              <span class="bg-accent/10 text-accent text-[10px] px-2 py-0.5 rounded">
-                {tag}
-              </span>
-            ))}
+          <!-- Top glow on hover -->
+          <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" style="background: radial-gradient(circle at 50% 0%, rgba(239,68,68,0.06) 0%, transparent 60%);"></div>
+
+          <div class="relative z-10">
+            <p class="text-[11px] text-accent uppercase tracking-widest font-medium">{item.category}</p>
+            <h3 class="text-xl font-bold mt-2">{item.title}</h3>
+            <p class="text-body text-sm mt-3 leading-relaxed">{item.description}</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              {item.tags.map((tag: string) => (
+                <span class="bg-accent/[0.08] text-accent/80 text-xs px-3 py-1 rounded-full border border-accent/10">
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       ))}

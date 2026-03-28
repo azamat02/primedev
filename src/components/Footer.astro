@@ -6,8 +6,9 @@ interface Props {
 const { t } = Astro.props;
 ---
 
-<footer class="py-6 px-6 border-t border-white/5">
-  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between text-muted text-xs gap-2">
+<footer class="relative py-8 px-6">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between text-muted text-sm gap-2">
     <span>{t.footer.copyright}</span>
     <span>{t.footer.site}</span>
   </div>

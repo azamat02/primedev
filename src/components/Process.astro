@@ -6,27 +6,51 @@ interface Props {
 const { t } = Astro.props;
 ---
 
-<section id="process" data-animate class="py-20 px-6 border-t border-white/5">
+<section id="process" data-animate class="relative py-24 px-6">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
+
   <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-10">
+    <div class="text-center mb-14">
       <p class="section-label">{t.process.label}</p>
       <h2 class="section-heading">{t.process.heading}</h2>
     </div>
-    <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
-      {t.process.steps.map((step: any, i: number) => (
-        <>
-          <div class="text-center flex-1 max-w-[160px]">
-            <div class="w-11 h-11 rounded-full bg-accent flex items-center justify-center mx-auto font-bold text-base">
+
+    <!-- Desktop: horizontal timeline -->
+    <div class="hidden md:block relative">
+      <!-- Connecting line -->
+      <div class="absolute top-7 left-[12%] right-[12%] h-px bg-gradient-to-r from-accent/30 via-accent/10 to-accent/30"></div>
+
+      <div class="grid grid-cols-4 gap-6">
+        {t.process.steps.map((step: any) => (
+          <div class="relative text-center group">
+            <div class="relative z-10 w-14 h-14 rounded-full bg-bg border-2 border-accent/40 flex items-center justify-center mx-auto font-bold text-lg text-accent group-hover:border-accent group-hover:shadow-[0_0_25px_rgba(239,68,68,0.3)] transition-all duration-500">
               {step.number}
             </div>
-            <h3 class="font-semibold text-sm mt-3">{step.title}</h3>
-            <p class="text-muted text-xs mt-1">{step.description}</p>
+            <h3 class="font-semibold text-base mt-5">{step.title}</h3>
+            <p class="text-muted text-sm mt-2">{step.description}</p>
           </div>
-          {i < t.process.steps.length - 1 && (
-            <span class="hidden md:block text-accent/40 text-lg">→</span>
-          )}
-        </>
-      ))}
+        ))}
+      </div>
+    </div>
+
+    <!-- Mobile: vertical timeline -->
+    <div class="md:hidden relative pl-8">
+      <!-- Vertical line -->
+      <div class="absolute left-[18px] top-0 bottom-0 w-px bg-accent/20"></div>
+
+      <div class="flex flex-col gap-10">
+        {t.process.steps.map((step: any) => (
+          <div class="relative">
+            <div class="absolute -left-8 w-9 h-9 rounded-full bg-bg border-2 border-accent/40 flex items-center justify-center font-bold text-sm text-accent">
+              {step.number}
+            </div>
+            <div class="ml-4">
+              <h3 class="font-semibold text-base">{step.title}</h3>
+              <p class="text-muted text-sm mt-1">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </section>

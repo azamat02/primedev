@@ -21,7 +21,7 @@
   }
 
   .section-heading {
-    @apply text-2xl font-bold mt-2;
+    @apply text-3xl md:text-4xl font-bold mt-3;
   }
 
   .card-base {
@@ -29,16 +29,52 @@
   }
 
   .btn-primary {
-    @apply bg-accent hover:bg-accent-hover text-white px-7 py-3 rounded-lg font-semibold text-sm transition-colors;
+    @apply bg-accent hover:bg-accent-hover text-white px-8 py-3.5 rounded-lg font-semibold text-sm transition-all duration-300;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3), 0 0 60px rgba(239, 68, 68, 0.1);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.5), 0 0 80px rgba(239, 68, 68, 0.2);
+    transform: translateY(-1px);
   }
 
   .btn-outline {
-    @apply border border-accent/40 text-accent hover:bg-accent/10 px-7 py-3 rounded-lg text-sm transition-colors;
+    @apply border border-accent/40 text-accent hover:bg-accent/10 px-8 py-3.5 rounded-lg text-sm transition-all duration-300;
+  }
+
+  .btn-outline:hover {
+    transform: translateY(-1px);
   }
 
   [data-animate] {
     opacity: 0;
   }
+}
+
+/* Grid background pattern */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(239, 68, 68, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239, 68, 68, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Noise texture overlay */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glow orb */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
 }
 
 @keyframes fade-in-up {
@@ -54,4 +90,22 @@
 
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out both;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
