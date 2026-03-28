@@ -31,11 +31,8 @@ const { t } = Astro.props;
       <a href="#contact" class="shiny-cta">
         <span>{t.hero.cta}</span>
       </a>
-      <a href="#portfolio" class="cases-link group">
-        <span class="cases-link-text">{t.hero.ctaSecondary}</span>
-        <svg class="w-4 h-4 text-accent transition-transform duration-300 group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
+      <a href="#portfolio" class="shiny-cta shiny-cta--subtle">
+        <span>{t.hero.ctaSecondary}</span>
       </a>
     </div>
 
@@ -251,39 +248,18 @@ const { t } = Astro.props;
     to { rotate: 360deg; }
   }
 
-  /* Cases link */
-  .cases-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+  /* Subtle variant — same pill shape, muted border animation */
+  .shiny-cta--subtle {
+    --shiny-cta-highlight: rgba(255, 255, 255, 0.25);
+    --shiny-cta-highlight-subtle: rgba(255, 255, 255, 0.4);
+    --shiny-cta-bg-subtle: #151520;
+    --duration: 6s;
     color: #94a3b8;
-    font-size: 0.9375rem;
-    text-decoration: none;
-    transition: color 0.3s;
-    position: relative;
-    padding-bottom: 2px;
   }
 
-  .cases-link:hover {
+  .shiny-cta--subtle:hover,
+  .shiny-cta--subtle:focus-visible {
     color: #ffffff;
-  }
-
-  .cases-link-text {
-    position: relative;
-  }
-
-  .cases-link-text::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: linear-gradient(90deg, #ef4444, transparent);
-    transition: width 0.4s ease;
-  }
-
-  .cases-link:hover .cases-link-text::after {
-    width: 100%;
+    --gradient-percent: 15%;
   }
 </style>
