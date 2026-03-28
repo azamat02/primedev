@@ -256,7 +256,7 @@ const { t } = Astro.props;
 
   // Phone formatting masks per code
   const masks: Record<string, { mask: string; max: number; strip?: string[] }> = {
-    '+7':   { mask: '(XXX) XXX-XX-XX', max: 10, strip: ['7', '8'] },
+    '+7':   { mask: 'XXX XXX-XX-XX', max: 10 },
     '+380': { mask: '(XX) XXX-XX-XX', max: 9, strip: ['380'] },
     '+1':   { mask: '(XXX) XXX-XXXX', max: 10, strip: ['1'] },
     '+998': { mask: '(XX) XXX-XX-XX', max: 9 },
