@@ -67,8 +67,8 @@ const { t } = Astro.props;
             placeholder={t.contact.messagePlaceholder}
             class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-5 py-4 text-white text-sm placeholder:text-muted/60 focus:outline-none focus:border-accent/40 focus:bg-white/[0.05] transition-all duration-300 resize-none"
           ></textarea>
-          <button type="submit" class="btn-primary text-center mt-2">
-            {t.contact.submit}
+          <button type="submit" class="shiny-cta mt-3 w-full justify-center" style="padding: 1rem 2rem;">
+            <span>{t.contact.submit}</span>
           </button>
           <p id="form-success" class="hidden text-green-400 text-sm mt-1">{t.contact.successMessage}</p>
           <p id="form-error" class="hidden text-red-400 text-sm mt-1">{t.contact.errorMessage}</p>
