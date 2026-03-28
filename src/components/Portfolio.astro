@@ -1,4 +1,36 @@
 ---
+interface Props {
+  t: any;
+}
+
 const { t } = Astro.props;
 ---
-<section>Portfolio placeholder</section>
+
+<section id="portfolio" class="py-20 px-6 border-t border-white/5">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <p class="section-label">{t.portfolio.label}</p>
+      <h2 class="section-heading">{t.portfolio.heading}</h2>
+      <p class="text-body text-sm mt-2">{t.portfolio.subtitle}</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {t.portfolio.items.map((item: any) => (
+        <div class="relative overflow-hidden rounded-xl p-6 border border-accent/[0.15]" style="background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(239,68,68,0.03));">
+          <div class="absolute top-3 right-4 text-5xl font-extrabold text-accent/[0.08] select-none">
+            {item.number}
+          </div>
+          <p class="text-[11px] text-accent uppercase tracking-widest">{item.category}</p>
+          <h3 class="text-lg font-bold mt-2">{item.title}</h3>
+          <p class="text-body text-xs mt-2 leading-relaxed">{item.description}</p>
+          <div class="flex flex-wrap gap-1.5 mt-3">
+            {item.tags.map((tag: string) => (
+              <span class="bg-accent/10 text-accent text-[10px] px-2 py-0.5 rounded">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
