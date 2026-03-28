@@ -1,4 +1,22 @@
 ---
+interface Props {
+  t: any;
+}
+
 const { t } = Astro.props;
 ---
-<section>Hero placeholder</section>
+
+<section class="relative text-center py-24 px-6" style="background: radial-gradient(ellipse at center top, rgba(239,68,68,0.08) 0%, transparent 60%);">
+  <div class="max-w-2xl mx-auto">
+    <p class="section-label mb-4">{t.hero.label}</p>
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+      {t.hero.heading}<br />
+      <span class="text-accent">{t.hero.headingAccent}</span>
+    </h1>
+    <p class="text-body mt-4 text-lg max-w-lg mx-auto">{t.hero.description}</p>
+    <div class="mt-8 flex gap-3 justify-center flex-wrap">
+      <a href="#contact" class="btn-primary">{t.hero.cta}</a>
+      <a href="#portfolio" class="btn-outline">{t.hero.ctaSecondary}</a>
+    </div>
+  </div>
+</section>
