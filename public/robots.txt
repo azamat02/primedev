@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://primedev.kz/sitemap-index.xml
