@@ -17,34 +17,11 @@
 
 @layer components {
   .section-label {
-    @apply text-sm uppercase tracking-[4px] text-accent inline-block relative font-medium;
-    font-family: 'Unbounded', system-ui, sans-serif;
-  }
-
-  .section-label::before,
-  .section-label::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(239,68,68,0.4));
-  }
-
-  .section-label::before {
-    right: calc(100% + 14px);
-    background: linear-gradient(90deg, transparent, rgba(239,68,68,0.4));
-  }
-
-  .section-label::after {
-    left: calc(100% + 14px);
-    background: linear-gradient(270deg, transparent, rgba(239,68,68,0.4));
+    @apply uppercase text-accent inline-block relative;
   }
 
   .section-heading {
-    @apply text-3xl md:text-5xl font-bold mt-4;
-    font-family: 'Unbounded', system-ui, sans-serif;
-    letter-spacing: -0.02em;
+    @apply font-bold;
   }
 
   .card-base {
@@ -98,6 +75,26 @@
   color: #ef4444 !important;
   margin-bottom: 1rem !important;
   display: inline-block !important;
+  position: relative !important;
+}
+
+.section-label::before,
+.section-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+}
+
+.section-label::before {
+  right: calc(100% + 14px);
+  background: linear-gradient(90deg, transparent, rgba(239,68,68,0.4));
+}
+
+.section-label::after {
+  left: calc(100% + 14px);
+  background: linear-gradient(270deg, transparent, rgba(239,68,68,0.4));
 }
 
 .section-heading {
@@ -106,5 +103,6 @@
   letter-spacing: -0.03em !important;
   line-height: 1.15 !important;
   color: #ffffff !important;
+  font-weight: 700 !important;
 }
 
