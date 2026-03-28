@@ -13,8 +13,8 @@ const { t } = Astro.props;
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-16 relative">
       <div class="absolute left-1/2 -translate-x-1/2 -top-8 text-[140px] font-black text-white/[0.015] leading-none select-none pointer-events-none" style="font-family: 'Unbounded', sans-serif;">02</div>
-      <p class="section-label">{t.portfolio.label}</p>
-      <h2 class="section-heading mt-4">{t.portfolio.heading}</h2>
+      <p class="section-label" style="font-family:'Unbounded',sans-serif; font-size:0.75rem; letter-spacing:0.25em;">{t.portfolio.label}</p>
+      <h2 class="section-heading mt-4" style="font-family:'Unbounded',sans-serif; font-size:clamp(1.75rem,4vw,2.75rem); letter-spacing:-0.03em; line-height:1.15;">{t.portfolio.heading}</h2>
       <p class="text-body text-base mt-4 max-w-lg mx-auto">{t.portfolio.subtitle}</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">

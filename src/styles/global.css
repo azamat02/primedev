@@ -67,42 +67,4 @@
   animation: fade-in-up 0.6s ease-out both;
 }
 
-/* Outside @layer so these win over Tailwind utilities */
-.section-label {
-  font-family: 'Unbounded', system-ui, sans-serif !important;
-  font-size: 0.75rem !important;
-  letter-spacing: 0.25em !important;
-  color: #ef4444 !important;
-  margin-bottom: 1rem !important;
-  display: inline-block !important;
-  position: relative !important;
-}
-
-.section-label::before,
-.section-label::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 40px;
-  height: 1px;
-}
-
-.section-label::before {
-  right: calc(100% + 14px);
-  background: linear-gradient(90deg, transparent, rgba(239,68,68,0.4));
-}
-
-.section-label::after {
-  left: calc(100% + 14px);
-  background: linear-gradient(270deg, transparent, rgba(239,68,68,0.4));
-}
-
-.section-heading {
-  font-family: 'Unbounded', system-ui, sans-serif !important;
-  font-size: clamp(1.75rem, 4vw, 2.75rem) !important;
-  letter-spacing: -0.03em !important;
-  line-height: 1.15 !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-}
 

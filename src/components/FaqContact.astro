@@ -17,8 +17,8 @@ const { t } = Astro.props;
       <div>
         <div class="relative mb-10">
           <div class="absolute -left-2 -top-8 text-[120px] font-black text-white/[0.015] leading-none select-none pointer-events-none" style="font-family: 'Unbounded', sans-serif;">04</div>
-          <p class="section-label">{t.faq.label}</p>
-          <h2 class="section-heading mt-4">{t.faq.heading}</h2>
+          <p class="section-label" style="font-family:'Unbounded',sans-serif; font-size:0.75rem; letter-spacing:0.25em;">{t.faq.label}</p>
+          <h2 class="section-heading mt-4" style="font-family:'Unbounded',sans-serif; font-size:clamp(1.5rem,3vw,2.25rem); letter-spacing:-0.03em; line-height:1.15;">{t.faq.heading}</h2>
         </div>
         <div class="flex flex-col gap-3">
           {t.faq.items.map((item: any) => (
@@ -38,8 +38,8 @@ const { t } = Astro.props;
       <!-- Contact Form -->
       <div id="contact">
         <div class="relative mb-10">
-          <p class="section-label">{t.contact.label}</p>
-          <h2 class="section-heading mt-4">{t.contact.heading}</h2>
+          <p class="section-label" style="font-family:'Unbounded',sans-serif; font-size:0.75rem; letter-spacing:0.25em;">{t.contact.label}</p>
+          <h2 class="section-heading mt-4" style="font-family:'Unbounded',sans-serif; font-size:clamp(1.5rem,3vw,2.25rem); letter-spacing:-0.03em; line-height:1.15;">{t.contact.heading}</h2>
         </div>
         <form
           id="contact-form"
