@@ -11,11 +11,11 @@ const { t } = Astro.props;
   <div class="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full opacity-20" style="background: radial-gradient(circle, rgba(239,68,68,0.06) 0%, transparent 70%);"></div>
 
   <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-14 relative">
-      <div class="absolute left-1/2 -translate-x-1/2 -top-6 text-[120px] font-black text-white/[0.02] leading-none select-none pointer-events-none" style="font-family: 'Unbounded', sans-serif;">02</div>
+    <div class="text-center mb-16 relative">
+      <div class="absolute left-1/2 -translate-x-1/2 -top-8 text-[140px] font-black text-white/[0.015] leading-none select-none pointer-events-none" style="font-family: 'Unbounded', sans-serif;">02</div>
       <p class="section-label">{t.portfolio.label}</p>
-      <h2 class="section-heading">{t.portfolio.heading}</h2>
-      <p class="text-body text-base mt-3">{t.portfolio.subtitle}</p>
+      <h2 class="section-heading mt-4">{t.portfolio.heading}</h2>
+      <p class="text-body text-base mt-4 max-w-lg mx-auto">{t.portfolio.subtitle}</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       {t.portfolio.items.map((item: any) => (

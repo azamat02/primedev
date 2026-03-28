@@ -15,10 +15,10 @@ const { t } = Astro.props;
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
       <!-- FAQ -->
       <div>
-        <div class="relative mb-8">
-          <div class="absolute -left-2 -top-6 text-[100px] font-black text-white/[0.02] leading-none select-none pointer-events-none" style="font-family: 'Unbounded', sans-serif;">04</div>
+        <div class="relative mb-10">
+          <div class="absolute -left-2 -top-8 text-[120px] font-black text-white/[0.015] leading-none select-none pointer-events-none" style="font-family: 'Unbounded', sans-serif;">04</div>
           <p class="section-label">{t.faq.label}</p>
-          <h2 class="section-heading">{t.faq.heading}</h2>
+          <h2 class="section-heading mt-4">{t.faq.heading}</h2>
         </div>
         <div class="flex flex-col gap-3">
           {t.faq.items.map((item: any) => (
@@ -37,9 +37,9 @@ const { t } = Astro.props;
 
       <!-- Contact Form -->
       <div id="contact">
-        <div class="relative mb-8">
+        <div class="relative mb-10">
           <p class="section-label">{t.contact.label}</p>
-          <h2 class="section-heading">{t.contact.heading}</h2>
+          <h2 class="section-heading mt-4">{t.contact.heading}</h2>
         </div>
         <form
           id="contact-form"
