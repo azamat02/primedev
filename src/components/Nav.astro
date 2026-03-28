@@ -18,7 +18,7 @@ const navLinks = [
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-bg/80 backdrop-blur-md border-b border-accent/10">
+<header id="main-nav" class="fixed top-0 left-0 right-0 z-50 nav-hidden transition-all duration-500">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
     <a href={getLocalizedPath(currentLang)} class="text-xl font-bold">
       PRIME<span class="text-accent">DEV</span>
@@ -57,7 +57,7 @@ const navLinks = [
     </button>
   </div>
 
-  <div id="mobile-menu" class="hidden md:hidden border-t border-accent/10 bg-bg/95 backdrop-blur-md">
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-bg/95 backdrop-blur-md">
     <nav class="flex flex-col px-6 py-4 gap-3">
       {navLinks.map(link => (
         <a href={link.href} class="text-body hover:text-white text-sm transition-colors mobile-nav-link">
@@ -81,11 +81,48 @@ const navLinks = [
   </div>
 </header>
 
+<style is:global>
+  .nav-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  .nav-visible {
+    transform: translateY(0);
+    opacity: 1;
+    background: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+</style>
+
 <script>
+  const nav = document.getElementById('main-nav');
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
   const links = document.querySelectorAll('.mobile-nav-link');
 
+  // Show nav on scroll down past hero
+  let lastScroll = 0;
+  const threshold = 300;
+
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+
+    if (current > threshold) {
+      nav?.classList.remove('nav-hidden');
+      nav?.classList.add('nav-visible');
+    } else {
+      nav?.classList.add('nav-hidden');
+      nav?.classList.remove('nav-visible');
+      menu?.classList.add('hidden');
+    }
+
+    lastScroll = current;
+  });
+
+  // Mobile menu
   btn?.addEventListener('click', () => {
     menu?.classList.toggle('hidden');
   });
