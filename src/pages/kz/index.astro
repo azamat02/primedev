@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Hero from '../../components/Hero.astro';
+import Services from '../../components/Services.astro';
+import Portfolio from '../../components/Portfolio.astro';
+import Process from '../../components/Process.astro';
+import FaqContact from '../../components/FaqContact.astro';
+import Footer from '../../components/Footer.astro';
+import { getTranslations } from '../../i18n/utils';
+
+const t = getTranslations('kz');
+---
+
+<Layout title={t.meta.title} description={t.meta.description} lang={t.lang} currentLang="kz">
+  <Nav t={t} currentLang="kz" />
+  <main>
+    <Hero t={t} />
+    <Services t={t} />
+    <Portfolio t={t} />
+    <Process t={t} />
+    <FaqContact t={t} />
+  </main>
+  <Footer t={t} />
+</Layout>
