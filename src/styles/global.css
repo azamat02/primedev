@@ -17,7 +17,27 @@
 
 @layer components {
   .section-label {
-    @apply text-xs uppercase tracking-[3px] text-accent;
+    @apply text-xs uppercase tracking-[3px] text-accent inline-block relative;
+  }
+
+  .section-label::before,
+  .section-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(239,68,68,0.4));
+  }
+
+  .section-label::before {
+    right: calc(100% + 12px);
+    background: linear-gradient(90deg, transparent, rgba(239,68,68,0.4));
+  }
+
+  .section-label::after {
+    left: calc(100% + 12px);
+    background: linear-gradient(270deg, transparent, rgba(239,68,68,0.4));
   }
 
   .section-heading {

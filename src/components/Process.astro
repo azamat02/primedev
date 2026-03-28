@@ -6,24 +6,24 @@ interface Props {
 const { t } = Astro.props;
 ---
 
-<section id="process" data-animate class="relative py-24 px-6">
+<section id="process" data-animate class="relative py-24 px-6 overflow-hidden">
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
+  <div class="absolute top-1/2 left-0 w-[300px] h-[300px] rounded-full opacity-20" style="background: radial-gradient(circle, rgba(239,68,68,0.06) 0%, transparent 70%);"></div>
 
   <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-14">
+    <div class="text-center mb-14 relative">
+      <div class="absolute left-1/2 -translate-x-1/2 -top-6 text-[120px] font-black text-white/[0.02] leading-none select-none pointer-events-none" style="font-family: 'Unbounded', sans-serif;">03</div>
       <p class="section-label">{t.process.label}</p>
       <h2 class="section-heading">{t.process.heading}</h2>
     </div>
 
     <!-- Desktop: horizontal timeline -->
     <div class="hidden md:block relative">
-      <!-- Connecting line -->
       <div class="absolute top-7 left-[12%] right-[12%] h-px bg-gradient-to-r from-accent/30 via-accent/10 to-accent/30"></div>
-
       <div class="grid grid-cols-4 gap-6">
         {t.process.steps.map((step: any) => (
           <div class="relative text-center group">
-            <div class="relative z-10 w-14 h-14 rounded-full bg-bg border-2 border-accent/40 flex items-center justify-center mx-auto font-bold text-lg text-accent group-hover:border-accent group-hover:shadow-[0_0_25px_rgba(239,68,68,0.3)] transition-all duration-500">
+            <div class="relative z-10 w-14 h-14 rounded-full bg-bg border-2 border-accent/40 flex items-center justify-center mx-auto font-bold text-lg text-accent group-hover:border-accent group-hover:shadow-[0_0_25px_rgba(239,68,68,0.3)] transition-all duration-500" style="font-family: 'Unbounded', sans-serif;">
               {step.number}
             </div>
             <h3 class="font-semibold text-base mt-5">{step.title}</h3>
@@ -35,9 +35,7 @@ const { t } = Astro.props;
 
     <!-- Mobile: vertical timeline -->
     <div class="md:hidden relative pl-8">
-      <!-- Vertical line -->
       <div class="absolute left-[18px] top-0 bottom-0 w-px bg-accent/20"></div>
-
       <div class="flex flex-col gap-10">
         {t.process.steps.map((step: any) => (
           <div class="relative">
